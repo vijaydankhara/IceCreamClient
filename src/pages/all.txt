@@ -1,0 +1,39 @@
+Complated page 
+
+1. HOME PAGE  ✔
+
+2. LOGIN PAGE ✔
+
+3. WISHLIST PAGE ✔
+
+4. BLOG CARD PAGE ✔
+
+5. ABOUT US PAGE ✔
+
+6. CONTACT PAGE ✔
+
+7. FAQ2 PAGE ✔
+
+8. PAGE 404 ✔
+
+9. SIGN UP ✔
+
+10. CART PAGE ✔
+
+11. shop page ✔ 
+
+12. simple product page ✔
+
+
+
+
+https://reactrouter.com/en/main/upgrading/reach
+
+
+
+
+
+Need improvement
+
+* Contact  page = send message - BackEnd side
+
