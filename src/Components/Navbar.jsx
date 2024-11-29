@@ -20,6 +20,7 @@ const Navbar = () => {
   const [productdownVisible, setProductdownVisible] = useState(false);
   const [blogdownVisible, setBlogdownVisible] = useState(false);
   const [pagedownVisible, setPagedownVisible] = useState(false);
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1200);
 
@@ -44,18 +45,7 @@ const Navbar = () => {
 
   const HomeMenu = () => (
     <div className="">
-      <ul className="set-font flex justify-center">
-        <div className="absolute shadow-xl pt-8 bg-white z-50 rounded-lg -ml-10 text-gray-400 w-[150px] h-[330px] flex flex-col items-center space-y-3">
-          <li className="hover:text-red-500">Home 1</li>
-          <li className="hover:text-red-500">Home 2</li>
-          <li className="hover:text-red-500">Home 3</li>
-          <li className="hover:text-red-500">Home 4</li>
-          <li className="hover:text-red-500">Home 5</li>
-          <li className="hover:text-red-500">Home 6</li>
-          <li className="hover:text-red-500">Home 7</li>
-          <li className="hover:text-red-500">Home 8</li>
-        </div>
-      </ul>
+      
     </div>
   );
 
@@ -528,6 +518,16 @@ const Navbar = () => {
     </div>
   );
 
+
+
+  const DataBaseProductMenu = () => (
+    <div className="">
+      <ul className="set-font flex justify-center">
+       
+      </ul>
+    </div>
+  );
+
   const toggleMenu = () => {
     if (isMobile) {
       setIsOpen((prevState) => !prevState);
@@ -565,7 +565,7 @@ const Navbar = () => {
               onClick={closeAllDropdowns}
             >
               Home
-              <FaAngleDown className="mt-[5px] ml-1" />
+           
             </NavLink>
             {dropdownVisible && HomeMenu()}
           </div>
@@ -613,6 +613,15 @@ const Navbar = () => {
             </a>
             {pagedownVisible && PageMenu()}
           </div>
+          <NavLink
+              to="/databaseproduct"
+              className="flex"
+              id="underline-animate"
+              onClick={closeAllDropdowns}
+            >
+              DataBaseProduct
+            
+            </NavLink>
         </div>
 
         <div
