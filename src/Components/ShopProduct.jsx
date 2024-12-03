@@ -388,7 +388,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize, selected
 
   return (
     <div>
-      <div className='mt-14 gap-8 w-full h-12 flex items-center mb-8 justify-end'>
+      <div className='mt-14 gap-8 w-full h-12 flex items-center mb-8 justify-end '>
         <a href="#" id='ListTypeMenu ' onClick={handleListTypeMenuClick}>
           <FaList className="text-gray-600 text-2xl hover:text-red-600" />
         </a>
@@ -443,7 +443,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize, selected
           <div className={`grid gap-4`} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
             {currentProducts.map((product, index) => (
               <NavLink to={`/product/${product.ProductId}`} key={index} className="hover:text-black">
-                <Card style={{ width: '100%', maxWidth: '450px', margin: 'auto' }}>
+                <Card style={{ width: '100%', maxWidth: '450px', margin: 'auto' }} className='border border-black rounded-2xl'>
                   <div className='relative'
                     onMouseEnter={() => {
                       setHoveredIndex(index);
@@ -463,7 +463,7 @@ const ShopProduct = ({ selectedColor, minPrice, maxPrice, selectedSize, selected
                     {visibleIndices[index] && <IconMenu />}
                   </div>
                   <Card.Body>
-                    <Card.Title className='productNameStyle font-medium text-xl mt-2'>{product.name}</Card.Title>
+                    <Card.Title className='productNameStyle font-medium text-xl mt-2 '>{product.name}</Card.Title>
                     <Card.Text>
                       <div className="flex">
                         <div className='flex gap-1'>

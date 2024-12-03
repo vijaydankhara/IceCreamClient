@@ -536,7 +536,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="w-full h-28 flex gap-2 justify-around" id="layout">
+      <div className="w-full h-16 flex gap-2 justify-around" id="layout">
         <div
           className="w-11 h-full flex justify-center items-center text-[30px]"
           id="menuBar"
