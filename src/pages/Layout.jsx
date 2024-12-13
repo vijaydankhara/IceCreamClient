@@ -15,6 +15,7 @@ import Wishlist from "./Wishlist";
 import CartPage from "./CartPage";
 import DataBaseProduct from "./DataBaseProduct";
 import ProtectedRoute from "./ProtectedRoute";
+import UserProfile from "./UserProfile";
 
 const PageRouter = createBrowserRouter([
   {
@@ -54,17 +55,21 @@ const PageRouter = createBrowserRouter([
       },
       {
         path: "/wishlist",
-        element: (
-          <ProtectedRoute>
-            <Wishlist />
-          </ProtectedRoute>
-        ),
+        element: <Wishlist />,
       },
       {
         path: "/shop",
         element: (
           <ProtectedRoute>
             <ShopList />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/userProfile",
+        element: (
+          <ProtectedRoute>
+            <UserProfile />
           </ProtectedRoute>
         ),
       },

@@ -22,6 +22,9 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
 
+  console.log('User email find ===> ',userEmail);
+  
+
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     const email = localStorage.getItem("userEmail");
@@ -30,6 +33,7 @@ const Login = () => {
       setUserEmail(email);
     }
   }, []);
+console.log('localStorage ==>',localStorage);
 
   const toggleForm = () => {
     setIsRegister(!isRegister);
@@ -91,6 +95,9 @@ const Login = () => {
         const email = response.data.email;
         localStorage.setItem("authToken", token);
         localStorage.setItem("userEmail", email);
+        console.log('data user store',localStorage);
+        console.log('data user email',email);
+        
         setUserEmail(email);
         setIsLoggedIn(true);
         setPopupMessage("User logged in successfully!");
@@ -151,6 +158,10 @@ const Login = () => {
     navigate("/login");
   };
 
+  const handleUserUpdate = () => {
+    navigate("/userProfile");
+  };
+
   return (
     <div className="container mx-auto p-4 bg-cover bg-center h-full">
       <div
@@ -172,6 +183,13 @@ const Login = () => {
               className="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600"
             >
               Logout
+            </button>
+
+            <button
+             onClick={handleUserUpdate}
+              className="bg-green-700 ml-32 text-white py-2 px-4 rounded-full hover:bg-green-900"
+            >
+              Update Profile
             </button>
           </div>
         ) : (

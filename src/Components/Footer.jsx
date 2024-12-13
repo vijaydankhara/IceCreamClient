@@ -168,7 +168,7 @@ function Footer() {
             </a>
           </div>
         </div><br />
-        <h1 className='text-red-200'>Created By Bhautik Dudhat 💻</h1>
+        <h1 className='text-red-200'>Created By Vijay Dankhara 💻</h1>
       </div>
     </footer>
   );
